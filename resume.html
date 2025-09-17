@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Orusaar - Future Senior Developer CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        /* Default light theme variables */
+        --color-background: #ffffff;
+        --color-text: #2c3e50;
+        --color-primary: #3498db;
+        --color-primary-dark: #2980b9;
+        --color-card-bg: #f8f9fa;
+        --color-shadow: rgba(0, 0, 0, 0.05);
+
+        /* Language level colors */
+        --color-native-bg: #d4edc9;
+        --color-native-text: #2c5f2d;
+        --color-fluent-bg: #e1f0fa;
+        --color-fluent-text: #1a5f7a;
+        --color-intermediate-bg: #fff3cd;
+        --color-intermediate-text: #856404;
+        --color-basic-bg: #f8d7da;
+        --color-basic-text: #721c24;
+
+        /* Progress bar colors */
+        --color-progress-bg: #e1e8ed;
+        --color-progress-fill-start: #3498db;
+        --color-progress-fill-end: #2980b9;
+      }
+
+      .theme-dark {
+        /* Dark theme overrides */
+        --color-background: #1a1a1a;
+        --color-text: #e1e1e1;
+        --color-primary: #61dafb;
+        --color-primary-dark: #4fa8d5;
+        --color-card-bg: #2d2d2d;
+        --color-shadow: rgba(0, 0, 0, 0.2);
+
+        /* Language level colors - darker variants */
+        --color-native-bg: #1e3b1e;
+        --color-native-text: #a8e6a8;
+        --color-fluent-bg: #1a3f5a;
+        --color-fluent-text: #89c4e1;
+        --color-intermediate-bg: #3e3417;
+        --color-intermediate-text: #ffd970;
+        --color-basic-bg: #3d1f1f;
+        --color-basic-text: #ff9999;
+
+        /* Progress bar colors - darker variants */
+        --color-progress-bg: #3d3d3d;
+        --color-progress-fill-start: #61dafb;
+        --color-progress-fill-end: #4fa8d5;
+      }
+
+      html {
+        -webkit-print-color-adjust: exact;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px;
+        color: var(--color-text);
+        background-color: var(--color-background);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .title {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid var(--color-primary);
+      }
+
+      .name-title {
+        flex: 2;
+      }
+
+      h1 {
+        color: var(--color-text);
+        margin: 0;
+        font-size: 2.5em;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .title {
+        color: var(--color-primary);
+        font-size: 1.2em;
+        margin-top: 5px;
+        font-weight: 500;
+      }
+
+      .contact-info {
+        flex: 1;
+        text-align: right;
+        font-size: 0.9em;
+      }
+
+      .contact-info p {
+        margin: 5px 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .contact-info .icon {
+        width: 18px;
+        height: 18px;
+        order: 2;
+        margin-right: 0;
+        margin-left: 8px;
+      }
+
+      h2 {
+        color: var(--color-primary);
+        margin-top: 30px;
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+
+      h2::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          transparent
+        );
+      }
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 20px 0;
+      }
+
+      .skill-category {
+        background: var(--color-card-bg);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px var(--color-shadow);
+      }
+
+      .skill-item {
+        margin-bottom: 15px;
+      }
+
+      .skill-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      .progress-bar {
+        height: 8px;
+        background-color: var(--color-progress-bg);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .progress-bar .progress {
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          var(--color-progress-fill-start),
+          var(--color-progress-fill-end)
+        );
+        border-radius: 4px;
+        transition: width 0.5s ease-in-out;
+      }
+
+      .language-bar {
+        height: 4px;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .project-card {
+        background: var(--color-card-bg);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px var(--color-shadow);
+      }
+
+      .project-card h3 {
+        color: var(--color-text);
+        margin-top: 0;
+      }
+
+      .project-card ul {
+        padding-left: 20px;
+        margin: 10px 0;
+      }
+
+      .education-section {
+        background: var(--color-card-bg);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+
+      .certifications {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .cert-card {
+        background: var(--color-card-bg);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 5px var(--color-shadow);
+      }
+
+      .cert-card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+      .languages-section {
+        background: var(--color-card-bg);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        box-shadow: 0 2px 5px var(--color-shadow);
+      }
+
+      .languages-section h3 {
+        margin: 0 0 10px 0;
+        color: var(--color-text);
+        font-size: 1.1em;
+      }
+
+      .language-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 30px;
+      }
+
+      .language-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .language-name {
+        font-weight: 500;
+      }
+
+      .language-level {
+        font-size: 0.85em;
+        padding: 2px 8px;
+        border-radius: 12px;
+        background: var(--color-progress-bg);
+      }
+
+      .native {
+        background: var(--color-native-bg);
+        color: var(--color-native-text);
+      }
+
+      .fluent {
+        background: var(--color-fluent-bg);
+        color: var(--color-fluent-text);
+      }
+
+      .intermediate {
+        background: var(--color-intermediate-bg);
+        color: var(--color-intermediate-text);
+      }
+
+      .basic {
+        background: var(--color-basic-bg);
+        color: var(--color-basic-text);
+      }
+
+      .no-bg {
+        background: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Hexagon Skills */
+      .hexagon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 20px 0;
+      }
+
+      .hexagon-skill {
+        position: relative;
+        transition: transform 0.3s ease;
+      }
+
+      .hexagon-skill.large {
+        width: 160px;
+        height: 180px;
+      }
+
+      .hexagon-skill.medium {
+        width: 140px;
+        height: 160px;
+      }
+
+      .hexagon-skill.small {
+        width: 120px;
+        height: 140px;
+      }
+
+      .hexagon-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        background: var(--color-card-bg);
+        clip-path: polygon(
+          50% 0%,
+          100% 25%,
+          100% 75%,
+          50% 100%,
+          0% 75%,
+          0% 25%
+        );
+        transition: transform 0.3s ease;
+      }
+
+      .skill-icon {
+        width: auto;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .large .skill-icon {
+        height: 60px;
+      }
+
+      .medium .skill-icon {
+        height: 50px;
+      }
+
+      .small .skill-icon {
+        height: 40px;
+      }
+
+      .skill-name {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 0.9em;
+        margin-bottom: 5px;
+      }
+
+      .skill-level {
+        font-size: 0.8em;
+        color: var(--color-primary);
+        font-weight: 500;
+      }
+
+      .hexagon-progress {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          var(--color-primary-dark),
+          var(--color-primary)
+        );
+        opacity: 0.2;
+        clip-path: polygon(
+          50% 0%,
+          100% 25%,
+          100% calc(25% + (50% * var(--progress) / 100)),
+          50% calc(0% + (100% * var(--progress) / 100)),
+          0% calc(25% + (50% * var(--progress) / 100)),
+          0% 25%
+        );
+      }
+
+      /* Code Skills */
+      .code-skills-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .code-skill {
+        width: 100%;
+      }
+
+      .code-skill-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+
+      .skill-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .skill-title .icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      /* Language-specific colors */
+      .javascript-skill .icon {
+        filter: invert(83%) sepia(34%) saturate(7048%) hue-rotate(359deg)
+          brightness(103%) contrast(105%);
+      }
+      .javascript-skill .code-progress {
+        background: linear-gradient(90deg, #f7df1e, #e6cc00) !important;
+      }
+
+      .html-skill .icon {
+        filter: invert(33%) sepia(93%) saturate(2047%) hue-rotate(351deg)
+          brightness(94%) contrast(92%);
+      }
+      .html-skill .code-progress {
+        background: linear-gradient(90deg, #e44d26, #f16529) !important;
+      }
+
+      .css-skill .icon {
+        filter: invert(31%) sepia(98%) saturate(1043%) hue-rotate(183deg)
+          brightness(87%) contrast(84%);
+      }
+      .css-skill .code-progress {
+        background: linear-gradient(90deg, #264de4, #2965f1) !important;
+      }
+
+      .java-skill .icon {
+        filter: invert(28%) sepia(75%) saturate(1742%) hue-rotate(338deg)
+          brightness(89%) contrast(88%);
+      }
+      .java-skill .code-progress {
+        background: linear-gradient(90deg, #e76f00, #e76f00) !important;
+      }
+
+      /* Update the progress bar styles */
+      .code-skill-bar {
+        height: 10px;
+        background: var(--color-progress-bg);
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .code-progress {
+        height: 100%;
+        border-radius: 5px;
+        transition: width 0.5s ease-in-out;
+      }
+
+      .skill-percentage {
+        display: none; /* Remove percentage from bar */
+      }
+
+      /* Language Circles */
+      .language-circles {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 20px 0;
+      }
+
+      .language-circle {
+        width: 120px;
+        height: 120px;
+        position: relative;
+      }
+
+      .circle-progress {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: relative;
+        transform: rotate(-135deg);
+      }
+
+      .circle-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(135deg);
+        z-index: 2;
+      }
+
+      .circle-progress::before {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border-radius: 50%;
+        background: var(--color-background);
+        z-index: 1;
+      }
+
+      .circle-progress::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 50%;
+        width: 50%;
+        height: 50%;
+        background: var(--color-background);
+        z-index: 1;
+      }
+
+      .native-circle {
+        background: conic-gradient(
+          var(--color-progress-bg) 0deg,
+          var(--color-native-bg) 0deg 270deg,
+          var(--color-progress-bg) 270deg
+        );
+      }
+
+      .fluent-circle {
+        background: conic-gradient(
+          var(--color-progress-bg) 0deg,
+          var(--color-fluent-bg) 0deg 240deg,
+          var(--color-progress-bg) 240deg
+        );
+      }
+
+      .intermediate-circle {
+        background: conic-gradient(
+          var(--color-progress-bg) 0deg,
+          var(--color-intermediate-bg) 0deg 170deg,
+          var(--color-progress-bg) 170deg
+        );
+      }
+
+      .basic-circle {
+        background: conic-gradient(
+          var(--color-progress-bg) 0deg,
+          var(--color-basic-bg) 0deg 90deg,
+          var(--color-progress-bg) 90deg
+        );
+      }
+
+      .language-circle .language-name {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 0.9em;
+        margin-bottom: 2px;
+      }
+
+      .language-circle .language-level {
+        font-size: 0.8em;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-weight: 500;
+      }
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+
+      .skill-title {
+        display: flex;
+        align-items: center;
+      }
+
+      .code-skill-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      /* Framework-specific colors */
+      .frontend-skill .skill-icon {
+        filter: invert(33%) sepia(93%) saturate(2047%) hue-rotate(351deg)
+          brightness(94%) contrast(92%);
+      }
+      .frontend-skill .hexagon-content {
+        border: 3px solid #e44d26;
+      }
+
+      .nodejs-skill .skill-icon {
+        filter: invert(42%) sepia(97%) saturate(378%) hue-rotate(71deg)
+          brightness(96%) contrast(88%);
+      }
+      .nodejs-skill .hexagon-content {
+        border: 3px solid #68a063;
+      }
+
+      .react-skill .skill-icon {
+        filter: invert(74%) sepia(51%) saturate(4969%) hue-rotate(157deg)
+          brightness(101%) contrast(97%);
+      }
+      .react-skill .hexagon-content {
+        border: 3px solid #61dafb;
+      }
+
+      /* Update hexagon styles */
+      .hexagon-skill:hover .hexagon-content {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="name-title">
+        <h1>Richard Orusaar</h1>
+        <div class="title">Future Senior Developer</div>
+      </div>
+      <div class="contact-info">
+        <p>
+          richard.orusaar@gmail.com
+          <img src="assets/icons/email.svg" class="icon" alt="email" />
+        </p>
+        <p>
+          +372 58588390
+          <img src="assets/icons/phone.svg" class="icon" alt="phone" />
+        </p>
+        <p>
+          Tallinn, Estonia
+          <img
+            src="assets/icons/location-pin.svg"
+            class="icon"
+            alt="location"
+          />
+        </p>
+        <p>
+          github.com/RichardOrusaar
+          <img src="assets/icons/github.svg" class="icon" alt="github" />
+        </p>
+      </div>
+    </div>
+
+    <h2>About Me</h2>
+    <p>
+      Self-taught developer with a deep passion for programming and web
+      technologies. While my professional journey in IT is just beginning, I've
+      dedicated significant time to mastering development skills through
+      personal projects and online learning. My background in multiple languages
+      has sharpened my ability to quickly grasp new concepts and communicate
+      effectively. I'm now eager to transition my programming hobby into a
+      full-time career and tackle some challenges.
+    </p>
+
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Development Skills & Frameworks</h3>
+        <div class="hexagon-container">
+          <div class="hexagon-skill large frontend-skill">
+            <div class="hexagon-content">
+              <img src="assets/html5.svg" class="skill-icon" alt="Frontend" />
+              <div class="skill-name">Frontend</div>
+              <div class="skill-level">85%</div>
+            </div>
+          </div>
+          <div class="hexagon-skill medium nodejs-skill">
+            <div class="hexagon-content">
+              <img src="assets/nodejs.svg" class="skill-icon" alt="Node.js" />
+              <div class="skill-name">Node.js</div>
+              <div class="skill-level">65%</div>
+            </div>
+          </div>
+          <div class="hexagon-skill small react-skill">
+            <div class="hexagon-content">
+              <img src="assets/react.svg" class="skill-icon" alt="React" />
+              <div class="skill-name">React</div>
+              <div class="skill-level">40%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <div class="code-skills-container">
+          <div class="code-skill javascript-skill">
+            <div class="code-skill-header">
+              <span class="skill-title">
+                <img
+                  src="assets/javascript.svg"
+                  class="icon"
+                  alt="JavaScript"
+                />
+                JavaScript
+              </span>
+              <span>80%</span>
+            </div>
+            <div class="code-skill-bar">
+              <div class="code-progress" style="--progress: 80%"></div>
+            </div>
+          </div>
+          <div class="code-skill html-skill">
+            <div class="code-skill-header">
+              <span class="skill-title">
+                <img src="assets/html5.svg" class="icon" alt="HTML5" />
+                HTML5
+              </span>
+              <span>90%</span>
+            </div>
+            <div class="code-skill-bar">
+              <div class="code-progress" style="--progress: 90%"></div>
+            </div>
+          </div>
+          <div class="code-skill css-skill">
+            <div class="code-skill-header">
+              <span class="skill-title">
+                <img src="assets/css3.svg" class="icon" alt="CSS3" />
+                CSS3
+              </span>
+              <span>85%</span>
+            </div>
+            <div class="code-skill-bar">
+              <div class="code-progress" style="--progress: 85%"></div>
+            </div>
+          </div>
+          <div class="code-skill java-skill">
+            <div class="code-skill-header">
+              <span class="skill-title">
+                <img src="assets/java.svg" class="icon" alt="Java" />
+                Java
+              </span>
+              <span>75%</span>
+            </div>
+            <div class="code-skill-bar">
+              <div class="code-progress" style="--progress: 75%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="languages-section no-bg">
+      <h3>Languages</h3>
+      <div class="language-circles">
+        <div class="language-circle">
+          <div class="circle-progress native-circle">
+            <div class="circle-content">
+              <span class="language-name">Estonian</span>
+              <span class="language-level native">Native</span>
+            </div>
+          </div>
+        </div>
+        <div class="language-circle">
+          <div class="circle-progress native-circle">
+            <div class="circle-content">
+              <span class="language-name">Russian</span>
+              <span class="language-level native">Native</span>
+            </div>
+          </div>
+        </div>
+        <div class="language-circle">
+          <div class="circle-progress fluent-circle">
+            <div class="circle-content">
+              <span class="language-name">English</span>
+              <span class="language-level fluent">Fluent</span>
+            </div>
+          </div>
+        </div>
+        <div class="language-circle">
+          <div class="circle-progress intermediate-circle">
+            <div class="circle-content">
+              <span class="language-name">German</span>
+              <span class="language-level intermediate">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        <div class="language-circle">
+          <div class="circle-progress basic-circle">
+            <div class="circle-content">
+              <span class="language-name">Spanish</span>
+              <span class="language-level basic">Basic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <ul>
+          <li>Built using React and modern CSS techniques</li>
+          <li>Implemented responsive design principles</li>
+          <li>Integrated with GitHub API to showcase projects</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Task Management Application</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco.
+        </p>
+        <ul>
+          <li>Developed using Node.js and Express for the backend</li>
+          <li>Created RESTful API endpoints</li>
+          <li>Implemented user authentication</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Education</h2>
+    <div class="education-section">
+      <h3>Computer Science Studies</h3>
+      <p>Tallinna Ülikool | 2016 - 2018</p>
+      <ul>
+        <li>Completed 2 years of Computer Science curriculum</li>
+        <li>Focus on programming fundamentals and web development</li>
+        <li>Participated in student programming projects</li>
+      </ul>
+
+      <h3>Secondary Education</h3>
+      <p>Kadrioru Saksa Gümnaasium | 2013 - 2016</p>
+      <ul>
+        <li>Completed full secondary education program</li>
+        <li>Strong focus on German language and sciences</li>
+        <li>Participated in school's IT projects</li>
+      </ul>
+
+      <h3>Basic Education</h3>
+      <p>Kadrioru Saksa Gümnaasium | 2004 - 2013</p>
+      <ul>
+        <li>Completed basic education with excellent results</li>
+        <li>Early exposure to German language and culture</li>
+      </ul>
+    </div>
+
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="cert-card">
+        <h4>Web Development Bootcamp</h4>
+        <p>Udemy (2023)</p>
+      </div>
+      <div class="cert-card">
+        <h4>Java Programming Masterclass</h4>
+        <p>Coursera (2023)</p>
+      </div>
+      <div class="cert-card">
+        <h4>React.js Essential Training</h4>
+        <p>LinkedIn Learning (2023)</p>
+      </div>
+    </div>
+
+    <script>
+      const theme = "light"; // Change to 'dark' for dark theme
+      if (theme === "dark") {
+        document.body.classList.add("theme-dark");
+      }
+    </script>
+  </body>
+</html>
