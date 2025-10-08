@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generate PDF resume from HTML",
   "main": "generate-pdf.js",
+  "private": true,
   "scripts": {
     "generate": "node generate-pdf.js"
   },
